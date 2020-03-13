@@ -6,7 +6,7 @@
 <title> - 2025 -  4 Tate Carr</title>
 <style>
 ol{
-  background:lightgrey;
+  background:grey;
 }
 body {
   background-image: url("https://gifimage.net/wp-content/uploads/2017/08/test-gif-13.gif")
@@ -15,6 +15,29 @@ body {
 
 .correct{
   background:green;
+}
+
+.incorrect{
+  background:red;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<title> - 2025 -  4 Tate Carr</title>
+<style>
+ol{
+  background:lightgrey;
+}
+body {
+  background-image: url("https://gifimage.net/wp-content/uploads/2017/08/test-gif-13.gif")
+  
+}
+
+.correct{
+  background:lightgreen;
 }
 
 .incorrect{
@@ -29,7 +52,44 @@ body {
 <li>2 + 3<input data-correct="5"></li>
 <li>2<sup>3</sup> <input data-correct="8">
 <li>Who is Gary's favorite student?<input data-correct="Tate"></li>
-<li>What is capitol
+<li>What is the capitol of Washington?<input data-correct="Olympia" < li>
+</ol>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script id="rendered-js">
+console.clear();
+console.log("hello universe!")
+
+$("input").change(onChange);
+
+function onChange(evt){
+  
+ let correct= $(this).data("correct");
+  let response = $(this).val();
+  console.log(correct,response)
+  if(correct == response){
+    console.log("answer correct")
+    $(this).removeClass("incorrect").addClass("correct");
+  } else{
+    console.log("answer incorrect");
+     $(this).removeClass("correct").addClass("incorrect");
+
+  }
+  
+}
+    </script>
+</body>
+</html>
+
+</style>
+</head>
+<body translate="no">
+<h1>Math Problems</h1>
+<ol>
+<li>2 + 2<input data-correct="4"></li>
+<li>2 + 3<input data-correct="5"></li>
+<li>2<sup>3</sup> <input data-correct="8">
+<li>Who is Gary's favorite student?<input data-correct="Tate"></li>
+<li>What is the capitol of Washington
 </li>
 </ol>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
